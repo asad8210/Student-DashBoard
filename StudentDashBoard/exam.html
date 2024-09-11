@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+                <!-- Hamburger Menu -->
+                <div id="menu-toggle" class="menu-toggle" aria-label="Toggle Sidebar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+        <div class="sidebar">
+            <div id="profile-btn">
+            </div>
+            <div class="logo" title="Student Dashboard System">
+                <!--img src="./images/logo.png" alt=""-->
+                <h2>Student <span class="danger">Dashboard</span></h2>
+            </div>
+            <div class="info">
+                <p>HELLO, <b>ASAD KHAN</b></p>
+                <small class="text-muted">ID-123456789</small>
+            </div>
+            <div class="navbar">
+                <a href="index.html" class="active">
+                    <span class="material-icons-sharp">home</span>
+                    <h3>Home</h3>
+                </a>
+                <a href="timetable.html" onclick="timeTableAll()">
+                    <span class="material-icons-sharp">today</span>
+                    <h3>Time Table</h3>
+                </a>
+                <a href="exam.html">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Examination</h3>
+                </a>
+                <a href="password.html">
+                    <span class="material-icons-sharp">password</span>
+                    <h3>Change Password</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+            <aside>
+                <div class="profile">
+                    <div class="top">
+                        <div class="profile-photo">
+                            <!--img src="./images/profile-1.jpg" alt=""-->
+                        </div>
+                    </div>
+                    <div class="about">
+                        <h5>Course</h5>
+                        <p>BTECH(HONs) CSE "AI"</p>
+                        <h5>DOB</h5>
+                        <p>15-Sept-2003</p>
+                        <h5>Contact</h5>
+                        <p>9984675874</p>
+                        <h5>Email</h5>
+                        <p>beingasad47@gmail.com</p>
+                        <h5>Address</h5>
+                        <p>Ashish Nagar West , Risali, Street No - 21 A</p>
+                    </div>
+                    <div class="theme-toggler">
+                        <span class="material-icons-sharp active">light_mode</span>
+                        <span class="material-icons-sharp">dark_mode</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <!-- Sidebar content goes here -->
+    </div>
+
+    <main>
+        <div class="exam timetable">
+            <h2>Exam Available</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Subject</th>
+                        <th>Room no.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>26 Nov 2022</td>
+                        <td>09-12 AM</td>
+                        <td>CAP283</td>
+                        <td>38-718</td>
+                    </tr>
+                    <tr>
+                        <td>28 Nov 2022</td>
+                        <td>09-12 AM</td>
+                        <td>CAP282</td>
+                        <td>38-718</td>
+                    </tr>
+                    <tr>
+                        <td>02 Dec 2022</td>
+                        <td>09-12 AM</td>
+                        <td>CAP267</td>
+                        <td>34-509</td>
+                    </tr>
+                    <tr>
+                        <td>06 Dec 2022</td>
+                        <td>09-12 AM</td>
+                        <td>CAP213</td>
+                        <td>34-509</td>
+                    </tr>
+                    <tr>
+                        <td>12 Dec 2022</td>
+                        <td>09-12 AM</td>
+                        <td>CAP214</td>
+                        <td>34-509</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    
+    <script src="app.js"></script>
+</body>
+</html>

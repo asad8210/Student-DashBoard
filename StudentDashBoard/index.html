@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="menu-toggle" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="sidebar">
+            <div id="profile-btn"></div>
+            <div class="logo" title="Student Dashboard System">
+                <h2>Student <span class="danger">Dashboard</span></h2>
+            </div>
+            <div class="info">
+                <p>HELLO, <b id="user-name">ASAD KHAN</b></p>
+                <small class="text-muted">ID-123456789</small>
+            </div>
+            <div class="navbar">
+                <a href="index.html" class="active">
+                    <span class="material-icons-sharp">home</span>
+                    <h3>Home</h3>
+                </a>
+                <a href="timetable.html" onclick="timeTableAll()">
+                    <span class="material-icons-sharp">today</span>
+                    <h3>Time Table</h3>
+                </a>
+                <a href="exam.html">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Examination</h3>
+                </a>
+                <a href="password.html">
+                    <span class="material-icons-sharp">password</span>
+                    <h3>Change Password</h3>
+                </a>
+                <a href="login.html" id="logoutBtn">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+            <aside>
+                <div class="profile">
+                    <div class="top">
+                        <div class="profile-photo"></div>
+                    </div>
+                    <div class="about">
+                        <h5>Course</h5>
+                        <p>BTECH(HONs) CSE "AI"</p>
+                        <h5>DOB</h5>
+                        <p>15-Sept-2003</p>
+                        <h5>Contact</h5>
+                        <p>9984675874</p>
+                        <h5>Email</h5>
+                        <p>beingasad47@gmail.com</p>
+                        <h5>Address</h5>
+                        <p>Ashish Nagar West, Risali, Street No - 21 A</p>
+                    </div>
+                    <div class="theme-toggler">
+                        <span class="material-icons-sharp active">light_mode</span>
+                        <span class="material-icons-sharp">dark_mode</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <h1>Participants</h1>
+            <div class="subjects">
+                <div class="eg">
+                    <span class="material-icons-sharp">architecture</span>
+                    <h3>Machine Learning</h3>
+                    <h2>12/14</h2>
+                    <div class="progress">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>86%</p>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <div class="mth">
+                    <span class="material-icons-sharp">functions</span>
+                    <h3>Data Structures</h3>
+                    <h2>27/29</h2>
+                    <div class="progress">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>93%</p>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <div class="cs">
+                    <span class="material-icons-sharp">computer</span>
+                    <h3>Operating System</h3>
+                    <h2>27/30</h2>
+                    <div class="progress">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>81%</p>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <div class="net">
+                    <span class="material-icons-sharp">router</span>
+                    <h3>Internet Of Things</h3>
+                    <h2>25/27</h2>
+                    <div class="progress">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>92%</p>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <div class="cg">
+                    <span class="material-icons-sharp">dns</span>
+                    <h3>Soft Skills...</h3>
+                    <h2>24/25</h2>
+                    <div class="progress">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>96%</p>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+            </div>
+
+            <div class="timetable" id="timetable">
+                <div>
+                    <span id="prevDay">&lt;</span>
+                    <h2>Today's Timetable</h2>
+                    <span id="nextDay">&gt;</span>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Room No.</th>
+                            <th>Subject</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </main>
+
+        <div class="right">
+            <div class="announcements">
+                <h2>Notifications</h2>
+                <div class="updates">
+                    <div class="message">
+                        <p> <b>Academic</b> Summer internship training with Live Projects.</p>
+                        <small class="text-muted">2 Minutes Ago</small>
+                    </div>
+                    <div class="message">
+                        <p> <b>Co-curricular</b> 5th Semester Minor Project training.</p>
+                        <small class="text-muted">10 Minutes Ago</small>
+                    </div>
+                    <div class="message">
+                        <p> <b>Examination</b> Instructions for Class Test Examination.</p>
+                        <small class="text-muted">Yesterday</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leaves">
+                <h2>Faculty on leave</h2>
+                <div class="teacher">
+                    <div class="profile-photo"><img src="./images/profile-2.jpeg" alt=""></div>
+                    <div class="info">
+                        <h3>The Faculty</h3>
+                        <small class="text-muted">Day Span: Full Day</small>
+                    </div>
+                </div>
+                <div class="teacher">
+                    <div class="profile-photo"><img src="./images/profile-3.jpg" alt=""></div>
+                    <div class="info">
+                        <h3>Dipti Verma</h3>
+                        <small class="text-muted">Day Span: Half Day</small>
+                    </div>
+                </div>
+                <div class="teacher">
+                    <div class="profile-photo"><img src="./images/profile-4.jpeg" alt=""></div>
+                    <div class="info">
+                        <h3>Nachiket Tapas</h3>
+                        <small class="text-muted">Day Span: Full Day</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="timetable.js"></script>
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('logoutBtn').addEventListener('click', function () {
+            // Clear the session and redirect to login.html upon logout
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('username');
+            window.location.href = 'login.html';
+        });
+
+        // Check if the user is logged in, if not redirect to login.html
+        if (!localStorage.getItem('isLoggedIn')) {
+            window.location.href = 'login.html';
+        }
+
+        // Set the username in the UI
+        document.getElementById('user-name').textContent = localStorage.getItem('username') || 'ASAD KHAN';
+    </script>
+</body>
+
+</html>

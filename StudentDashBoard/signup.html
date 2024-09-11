@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>SignUp Form</title>  
+</head>
+<body>
+    <div class="l-form">
+        <div class="shape1"></div>
+        <div class="shape2"></div>
+
+        <div class="form">
+            <img src="assets/img/authentication.svg" alt="Authentication Illustration" class="form__img">
+
+            <!-- Form with the onsubmit event to handle sign-up -->
+            <form id="signupForm" class="form__content" onsubmit="return handleSignUp(event)">
+                <h2 class="form__title">Sign Up</h2>
+
+                <div class="form__div form__div-one">
+                    <div class="form__icon">
+                        <i class='bx bx-user-circle'></i>
+                    </div>
+                    <div class="form__div-input">
+                        <label for="username" class="form__label">Username</label>
+                        <input type="text" id="username" name="username" class="form__input" autocomplete="username" required>
+                    </div>
+                </div>
+
+                <div class="form__div">
+                    <div class="form__icon">
+                        <i class='bx bx-envelope'></i>
+                    </div>
+                    <div class="form__div-input">
+                        <label for="email" class="form__label">Email</label>
+                        <input type="email" id="email" name="email" class="form__input" autocomplete="email" required>
+                    </div>
+                </div>
+
+                <div class="form__div">
+                    <div class="form__icon">
+                        <i class='bx bx-lock'></i>
+                    </div>
+                    <div class="form__div-input">
+                        <label for="password" class="form__label">Password</label>
+                        <input type="password" id="password" name="password" class="form__input" autocomplete="new-password" required>
+                    </div>
+                </div>
+
+                <div class="form__div">
+                    <div class="form__icon">
+                        <i class='bx bx-lock'></i>
+                    </div>
+                    <div class="form__div-input">
+                        <label for="confirmPassword" class="form__label">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" class="form__input" autocomplete="new-password" required>
+                    </div>
+                </div>
+
+                <input type="submit" id="submitButton" class="form__button" value="Sign Up">
+
+                <div class="form__signup">
+                    <span class="form__signup-text">Already have an account?</span>
+                    <a href="login.html" class="form__signup-link">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Handle sign-up form submission
+        function handleSignUp(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Basic validation to ensure password matches confirmation
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return false;
+            }
+
+            // Simulate successful sign-up
+            alert('Sign-up successful!');
+
+            // Redirect to login.html after successful sign-up
+            window.location.href = 'login.html';
+        }
+    </script>
+    
+    <!-- ===== MAIN JS ===== -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

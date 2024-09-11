@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="l-form">
+        <div class="shape1"></div>
+        <div class="shape2"></div>
+
+        <div class="form">
+            <img src="assets/img/authentication.svg" alt="Authentication Illustration" class="form__img">
+
+            <form id="loginForm" class="form__content" onsubmit="return handleLogin(event)">
+                <h2 class="form__title">Welcome!</h2>
+
+                <div class="form__div form__div-one">
+                    <div class="form__icon">
+                        <i class='bx bx-user-circle'></i>
+                    </div>
+                    <div class="form__div-input">
+                        <label for="username" class="form__label">Username</label>
+                        <input type="text" id="username" name="username" class="form__input" autocomplete="username" required>
+                    </div>
+                </div>
+
+                <div class="form__div">
+                    <div class="form__icon">
+                        <i class='bx bx-lock'></i>
+                    </div>
+                    <div class="form__div-input">
+                        <label for="password" class="form__label">Password</label>
+                        <input type="password" id="password" name="password" class="form__input" autocomplete="current-password" required>
+                    </div>
+                </div>
+
+                <a href="forgot-password.html" class="form__forgot">Forgot Password?</a>
+
+                <input type="submit" id="submitButton" class="form__button" value="Login">
+
+                <div class="form__social">
+                    <span class="form__social-text">Or login with</span>
+
+                    <a href="#" class="form__social-icon" aria-label="Login with Facebook"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="form__social-icon" aria-label="Login with Google"><i class='bx bxl-google'></i></a>
+                    <a href="#" class="form__social-icon" aria-label="Login with Instagram"><i class='bx bxl-instagram'></i></a>
+                </div>
+
+                <div class="form__signup">
+                    <span class="form__signup-text">Don't have an account?</span>
+                    <a href="signup.html" class="form__signup-link">Sign Up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Check if the user is already logged in, redirect to index.html if true
+        if (localStorage.getItem('isLoggedIn')) {
+            window.location.href = 'index.html';
+        }
+
+        // Handle login form submission
+        function handleLogin(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Basic authentication check (In production, connect to server-side authentication)
+            if (username === 'asad' && password === 'password') {
+                // Store session details in localStorage
+                localStorage.setItem('isLoggedIn', true);
+                localStorage.setItem('username', username);
+
+                // Redirect to index.html after successful login
+                window.location.href = 'index.html';
+            } else {
+                alert('Invalid credentials!');
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Hamburger Menu -->
+        <div id="menu-toggle" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="sidebar">
+            <div id="profile-btn"></div>
+            <div class="logo" title="Student Dashboard System">
+                <h2>Student <span class="danger">Dashboard</span></h2>
+            </div>
+            <div class="info">
+                <p>HELLO, <b>ASAD KHAN</b></p>
+                <small class="text-muted">ID-123456789</small>
+            </div>
+            <div class="navbar">
+                <a href="index.html" class="active">
+                    <span class="material-icons-sharp">home</span>
+                    <h3>Home</h3>
+                </a>
+                <a href="timetable.html">
+                    <span class="material-icons-sharp">today</span>
+                    <h3>Time Table</h3>
+                </a>
+                <a href="exam.html">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Examination</h3>
+                </a>
+                <a href="password.html">
+                    <span class="material-icons-sharp">password</span>
+                    <h3>Change Password</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+            <aside>
+                <div class="profile">
+                    <div class="top">
+                        <div class="profile-photo"></div>
+                    </div>
+                    <div class="about">
+                        <h5>Course</h5>
+                        <p>BTECH(HONs) CSE "AI"</p>
+                        <h5>DOB</h5>
+                        <p>15-Sept-2003</p>
+                        <h5>Contact</h5>
+                        <p>9984675874</p>
+                        <h5>Email</h5>
+                        <p>beingasad47@gmail.com</p>
+                        <h5>Address</h5>
+                        <p>Ashish Nagar West, Risali, Street No - 21 A</p>
+                    </div>
+                    <div class="theme-toggler">
+                        <span class="material-icons-sharp active">light_mode</span>
+                        <span class="material-icons-sharp">dark_mode</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </header>
+
+    <main style="margin: 0;">
+        <div class="timetable" id="timetable">
+            <div>
+                <div>
+                    <span id="prevDay">&lt;</span>
+                    <h2>Today's Timetable</h2>
+                    <span id="nextDay">&gt;</span>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Room No.</th>
+                        <th>Subject</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody id="timetable-body"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="timetable.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
